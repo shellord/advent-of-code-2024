@@ -17,7 +17,7 @@ public class Day1 {
     }
 
     private List<List<Integer>> parseInput(){
-        List<String> content = Utils.readInputLines("Day1");
+        List<String> content = Utils.readInputLines("Day1.input");
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> locationIds1 = new ArrayList<>();
         List<Integer> locationIds2 = new ArrayList<>();
