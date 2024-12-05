@@ -2,7 +2,7 @@ package org.shellord.adventofcode;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day2 {
+public class Day2 implements Solution<Number> {
     List<List<Integer>> parsedInput = parseInput();
 
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Day2 {
         ).collect(Collectors.toList());
     }
 
-    public long partOne(){
+    public Number partOne(){
        return parsedInput.stream().filter(this::isSafe).count();
     }
 
@@ -41,7 +41,7 @@ public class Day2 {
         return true;
     }
 
-    public long partTwo(){
+    public Number partTwo(){
         return parsedInput.stream().filter(i -> {
           if(isSafe(i)){
               return true;

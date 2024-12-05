@@ -3,7 +3,7 @@ package org.shellord.adventofcode;
 import java.util.*;
 
 
-public class Day1 {
+public class Day1 implements Solution<Integer> {
     List<List<Integer>> parsedInput = new ArrayList<>();
 
     public Day1(){
@@ -16,7 +16,7 @@ public class Day1 {
         System.out.println("Part 2: " + day1.partTwo());
     }
 
-    private List<List<Integer>> parseInput(){
+    public List<List<Integer>> parseInput(){
         List<String> content = Utils.readInputLines("Day1.input");
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> locationIds1 = new ArrayList<>();
@@ -33,7 +33,7 @@ public class Day1 {
         return result;
     }
 
-    private Integer partOne(){
+    public Integer partOne(){
         List<Integer> locationIds1 = new ArrayList<>(parsedInput.get(0));
         List<Integer> locationIds2 = new ArrayList<>(parsedInput.get(1));
         Collections.sort(locationIds1);
@@ -45,7 +45,7 @@ public class Day1 {
         return totalDistance;
     }
 
-    private Integer partTwo(){
+    public Integer partTwo(){
         List<Integer> locationIds1 = new ArrayList<>(parsedInput.get(0));
         List<Integer> locationIds2 = new ArrayList<>(parsedInput.get(1));
 

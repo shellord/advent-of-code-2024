@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class Utils {
     public static String readInput(String day){
         try{
